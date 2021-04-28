@@ -1,11 +1,12 @@
 <form [formGroup]="formulario" id="form" (submit)="onSubmit()" method="POST">
     
     <label for="nombres">Nombres</label>
-    <input formControlName="nombres" type="nombres" class="form-control" placeholder="Ejemplo: Juanito Roberto" required>
+    <input formControlName="nombres" class="form-control" placeholder="Ejemplo: Juanito Roberto" required>
+    <div class="invalid">Campo requerido</div>
     <label for="apellidos">Apellidos</label>
-    <input formControlName="apellidos" type="apellidos" class="form-control" placeholder="Ejemplo: Perez Muñoz">
+    <input formControlName="apellidos" class="form-control" placeholder="Ejemplo: Perez Muñoz" required>
     <label for="genero">Género</label>
-    
+
     <div class="genero">
         <input formControlName="genero" name="genero" type="radio" value="hombre"/>
         <label for="genero">Hombre</label>
@@ -18,9 +19,8 @@
         <input formControlName="genero" name="genero" type="radio" value="otro"/>
         <label for="genero">Otro</label>
     </div>
-    
     <label for="pais">Pais</label>
-    <select name="pais" id="pais" class="form-select" formControlName="pais">
+    <select name="pais" id="pais" class="form-select" formControlName="pais" ngModel>
         <option value="Chile">Chile</option>
         <option value="Argentina">Argentina</option>
         <option value="Peru">Peru</option>
@@ -30,7 +30,7 @@
         <option value="Urugua">Uruguay</option>
     </select>
     <label for="ciudad">Ciudad</label>
-    <input type="text" placeholder="Ejemplo: Viña del mar" class="form-control" formControlName="ciudad">
+    <input type="text" placeholder="Ejemplo: Viña del mar" class="form-control" formControlName="ciudad" ngModel>
     <div class="buttons">
         <button id="crear" class="btn btn-success" type="submit">Crear</button>
         <button id="cancelar" class="btn btn-danger" type="button" (click)="cleanForm()" >Cancelar</button>

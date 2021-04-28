@@ -2,9 +2,9 @@
 #clientHeader{
     display: flex;
     align-items: center;
-    
+    color: white;
     padding: 1rem;
-    background-color: #cacaca;
+    background-color: #324960;
 }
 #clientHeader h2{
     padding: 1rem;
@@ -16,18 +16,21 @@
 }
 
 nav{
-    background-color:  #ff9b61;
+    background-color:  #4FC3A1;
     padding: 1rem;
 }
 nav button{
     border: none;
-    background-color: #ff9b61;
+    background-color: #4FC3A1;
     margin: 0 1rem;
 }
 
 nav button:hover{
-    color: rgb(251, 255, 0);
+    color: white;
 }
 nav button:visited{
-    color: rgb(251, 255, 0);
+    color: white;
+}
+nav button:focus{
+    color: white;
 }
