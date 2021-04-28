@@ -1,0 +1,46 @@
+form {
+  border: solid black 1px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  margin: 0 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cacaca));
+  background: linear-gradient(#ffffff, #cacaca);
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 4%;
+  height: 2em;
+}
+
+.genero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 1rem;
+}
+
+.btn-danger {
+  margin-right: 2rem;
+}
+/*# sourceMappingURL=create-client.component.css.map */

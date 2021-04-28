@@ -1,1 +1,38 @@
-<p>create-client works!</p>
+<form [formGroup]="formulario" (submit)="onSubmit()" method="POST">
+    
+    <label for="nombres">Nombres</label>
+    <input formControlName="nombres" type="nombres" class="form-control" placeholder="Ejemplo: Juanito Roberto" required>
+    <label for="apellidos">Apellidos</label>
+    <input formControlName="apellidos" type="apellidos" class="form-control" placeholder="Ejemplo: Perez Muñoz">
+    <label for="genero">Género</label>
+    
+    <div class="genero">
+        <input formControlName="genero" name="genero" type="radio" value="hombre"/>
+        <label for="genero">Hombre</label>
+    </div>
+    <div class="genero">
+        <input formControlName="genero" name="genero" type="radio" value="mujer" />
+        <label for="genero">Mujer</label>
+    </div>
+    <div class="genero">
+        <input formControlName="genero" name="genero" type="radio" value="otro"/>
+        <label for="genero">Otro</label>
+    </div>
+    
+    <label for="pais">Pais</label>
+    <select name="pais" id="pais" class="form-select" formControlName="pais">
+        <option value="Chile">Chile</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Peru">Peru</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Urugua">Uruguay</option>
+    </select>
+    <label for="ciudad">Ciudad</label>
+    <input type="text" placeholder="Ejemplo: Viña del mar" class="form-control" formControlName="ciudad">
+    <div class="buttons">
+        <button id="crear" class="btn btn-success" type="submit">Crear</button>
+        <button id="cancelar" class="btn btn-danger" type="button" >Cancelar</button>
+    </div>
+</form>

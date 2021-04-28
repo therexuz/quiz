@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { CardViewComponent } from './card-view/card-view.component';
 import { CreateClientComponent } from './create-client/create-client.component';
-
+import {ReactiveFormsModule,FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,9 @@ import { CreateClientComponent } from './create-client/create-client.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
