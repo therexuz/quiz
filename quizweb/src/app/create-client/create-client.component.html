@@ -2,7 +2,6 @@
     
     <label for="nombres">Nombres</label>
     <input formControlName="nombres" class="form-control" placeholder="Ejemplo: Juanito Roberto" required>
-    <div class="invalid">Campo requerido</div>
     <label for="apellidos">Apellidos</label>
     <input formControlName="apellidos" class="form-control" placeholder="Ejemplo: Perez Muñoz" required>
     <label for="genero">Género</label>
@@ -20,7 +19,7 @@
         <label for="genero">Otro</label>
     </div>
     <label for="pais">Pais</label>
-    <select name="pais" id="pais" class="form-select" formControlName="pais" ngModel>
+    <select name="pais" id="pais" class="form-select" formControlName="pais" required>
         <option value="Chile">Chile</option>
         <option value="Argentina">Argentina</option>
         <option value="Peru">Peru</option>
@@ -30,7 +29,7 @@
         <option value="Urugua">Uruguay</option>
     </select>
     <label for="ciudad">Ciudad</label>
-    <input type="text" placeholder="Ejemplo: Viña del mar" class="form-control" formControlName="ciudad" ngModel>
+    <input type="text" placeholder="Ejemplo: Viña del mar" class="form-control" formControlName="ciudad" required>
     <div class="buttons">
         <button id="crear" class="btn btn-success" type="submit">Crear</button>
         <button id="cancelar" class="btn btn-danger" type="button" (click)="cleanForm()" >Cancelar</button>

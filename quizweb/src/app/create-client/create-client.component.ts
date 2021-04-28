@@ -13,11 +13,11 @@ export class CreateClientComponent implements OnInit {
   
   constructor(public fb:FormBuilder,public clientesService:ClientesService) { 
     this.formulario=fb.group({
-      nombres:['',[Validators.required]],
-      apellidos:['',[Validators.required]],
-      genero:['',[Validators.required]],
-      pais:['',[Validators.required]],
-      ciudad:['',[Validators.required]]
+      nombres: new FormControl('',[Validators.required]),
+      apellidos:new FormControl('',[Validators.required]),
+      genero:new FormControl('',[Validators.required]),
+      pais:new FormControl('',[Validators.required]),
+      ciudad:new FormControl('',[Validators.required])
     })
   }
 
@@ -26,7 +26,10 @@ export class CreateClientComponent implements OnInit {
   }
 
   onSubmit(){
-    
+    if(!this.formulario.valid){
+      alert("Rellene todos los campos")
+      return
+    }
     let cliente:Cliente={
       nombres:this.formulario.controls['nombres'].value,
       apellidos:this.formulario.controls['apellidos'].value,
