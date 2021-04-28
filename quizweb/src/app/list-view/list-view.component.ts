@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientesService } from '../clientes.service';
 
 @Component({
   selector: 'app-list-view',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public clientesService:ClientesService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

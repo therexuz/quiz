@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=card-view.component.css.map */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30%;
+      grid-template-columns: 30% 30%;
+}
+/*# sourceMappingURL=card-view.component.css.map */

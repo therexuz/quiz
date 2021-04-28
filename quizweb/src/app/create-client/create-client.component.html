@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" (submit)="onSubmit()" method="POST">
+<form [formGroup]="formulario" id="form" (submit)="onSubmit()" method="POST">
     
     <label for="nombres">Nombres</label>
     <input formControlName="nombres" type="nombres" class="form-control" placeholder="Ejemplo: Juanito Roberto" required>
@@ -33,6 +33,6 @@
     <input type="text" placeholder="Ejemplo: Viña del mar" class="form-control" formControlName="ciudad">
     <div class="buttons">
         <button id="crear" class="btn btn-success" type="submit">Crear</button>
-        <button id="cancelar" class="btn btn-danger" type="button" >Cancelar</button>
+        <button id="cancelar" class="btn btn-danger" type="button" (click)="cleanForm()" >Cancelar</button>
     </div>
 </form>

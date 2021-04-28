@@ -1,1 +1,23 @@
-<p>card-view works!</p>
+<div class="grid">
+  <div *ngFor="let item of clientesService.clientes" class="card mb-3" style="width: 540px;">
+    <div class="row no-gutters">
+      <div *ngIf=" item.genero == 'hombre' " class="col-md-4">
+        <img src="../../assets/img/hombre.png" class="card-img" alt="hombreImg">
+      </div>
+      <div *ngIf=" item.genero == 'mujer' " class="col-md-4">
+        <img src="../../assets/img/mujer.jpg" class="card-img" alt="mujerImg">
+      </div>
+      <div *ngIf=" item.genero == 'otro' " class="col-md-4">
+        <img src="../../assets/img/otro.jpg" class="card-img" alt="otroImg">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nombres}}{{item.apellidos}}</h5>
+          <p class="card-text">{{item.pais}},{{item.ciudad}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

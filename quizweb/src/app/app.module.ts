@@ -8,6 +8,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { CardViewComponent } from './card-view/card-view.component';
 import { CreateClientComponent } from './create-client/create-client.component';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms'
+import {ClientesService} from './clientes.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms'
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ClientesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

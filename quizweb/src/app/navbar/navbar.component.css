@@ -6,7 +6,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 1rem;
+  padding: 1rem;
+  background-color: #cacaca;
+}
+
+#clientHeader h2 {
   padding: 1rem;
 }
 
@@ -16,20 +20,21 @@
 }
 
 nav {
+  background-color: #ff9b61;
   padding: 1rem;
 }
 
 nav button {
   border: none;
-  background-color: white;
+  background-color: #ff9b61;
   margin: 0 1rem;
 }
 
 nav button:hover {
-  color: #46b5ff;
+  color: #fbff00;
 }
 
 nav button:visited {
-  color: #46b5ff;
+  color: #fbff00;
 }
 /*# sourceMappingURL=navbar.component.css.map */

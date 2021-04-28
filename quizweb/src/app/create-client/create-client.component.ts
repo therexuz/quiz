@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { ClientesService } from '../clientes.service';
 import { Cliente} from '../interfaces/cliente'
 @Component({
   selector: 'app-create-client',
@@ -9,10 +10,8 @@ import { Cliente} from '../interfaces/cliente'
 export class CreateClientComponent implements OnInit {
   
   formulario:FormGroup;
-
-  clientes:Array<Cliente> =[];
-
-  constructor(public fb:FormBuilder) { 
+  
+  constructor(public fb:FormBuilder,public clientesService:ClientesService) { 
     this.formulario=fb.group({
       nombres: new FormControl(''),
       apellidos: new FormControl(''),
@@ -20,12 +19,30 @@ export class CreateClientComponent implements OnInit {
       pais: new FormControl(''),
       ciudad: new FormControl('')
     })
+
+    
+  }
+  
+  ngOnInit(): void {
+    
+
   }
 
-  ngOnInit(): void {
-  }
   onSubmit(){
-    
+    let cliente:Cliente={
+      nombres:this.formulario.controls['nombres'].value,
+      apellidos:this.formulario.controls['apellidos'].value,
+      genero:this.formulario.controls['genero'].value,
+      pais:this.formulario.controls['pais'].value,
+      ciudad:this.formulario.controls['ciudad'].value
+    }
+
+    this.clientesService.clientes.push(cliente)
+  }
+  
+  cleanForm(){
+    let form = <HTMLFormElement>document.getElementById("form");
+    form.reset();
   }
 
 }
